@@ -1,0 +1,45 @@
+/* custom.scss */
+
+/* import the necessary Bootstrap files */
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+$prim :#1c9418;
+/* -------begin customization-------- */
+
+/* simply assign the value */
+$body-bg: #e4e3e3;
+
+/* or, use an existing variable */
+$theme-colors: (
+    primary: $prim,
+    secondary:  #f8be88,
+    success: #126e0a,
+    info : #dda2e7,
+    warning: #d6ac76,
+    danger: #7c0404,
+    
+    light: lighten($prim,15),
+    dark:darken($prim,25)
+);
+
+$border-radius: 5em;
+
+/* -------end customization-------- */
+
+/* finally, import Bootstrap to set the changes! */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+.main{
+    padding-top:10em;
+}
